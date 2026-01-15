@@ -1,41 +1,60 @@
 # 🚀 AWF - Antigravity Workflow Framework v3.0
 
 **The Operating System for AI Engineers.**  
-*Turn your Antigravity Agent/Cursor into a Senior Engineer with disciplined workflows.*
+*Hệ điều hành dành cho Kỹ sư AI.*
+
+*Turn your Antigravity Agent/Cursor into a Senior Engineer with disciplined workflows.*  
+*Biến AI Agent thành Senior Engineer với quy trình làm việc kỷ luật thép.*
 
 [![Website](https://img.shields.io/badge/Website-Live_Demo-cyan?style=for-the-badge)](https://awfweb.pages.dev/)
 [![Install Global](https://img.shields.io/badge/Install-Global-blue?style=for-the-badge)](#-installation-global)
 
 ---
 
-## 🛑 The Problem (Nỗi đau của bạn)
+## 🛑 The Problem (Vấn đề)
 
-Bạn có thường gặp những cảnh này khi code với AI không?
+**Have you ever experienced this with AI Coding?**  
+*Bạn có từng gặp cảnh này khi code với AI?*
 
-1.  **Memory Loss (Hay quên):** Chat được 20 câu, AI quên béng cấu trúc Database cũ. Nó tự ý tạo bảng trùng lặp hoặc viết code xung đột.
-2.  **Lazy Coding (Code ẩu):** AI đưa code "chạy được là được". Thiếu `try-catch`, hard-code API Key, và không check Edge Cases.
-3.  **Loop Debugging (Sửa đâu hỏng đó):** Fix lỗi A thì đẻ ra lỗi B. AI cứ sửa vòng vo mà không tìm Root Cause.
+1.  **Memory Loss / Mất trí nhớ:**  
+    AI forgets your database schema after 20 messages. It creates duplicate tables or conflicts.  
+    *AI quên cấu trúc Database sau 20 tin nhắn. Tự ý tạo bảng trùng lặp.*
+    
+2.  **Lazy Coding / Code ẩu:**  
+    AI gives "just works" code without `try-catch`, hard-coded API keys, and ignores edge cases.  
+    *AI đưa code thiếu an toàn, hard-code API Key, bỏ qua các trường hợp lỗi.*
 
-👉 **Đó là vì bạn đang dùng AI như một "Junior Developer".** Cần phải quản lý (Manage) nó.
+3.  **Loop Debugging / Vòng lặp Debug:**  
+    Fixing bug A creates bug B. AI fixes blindly without finding the Root Cause.  
+    *Sửa lỗi này đẻ ra lỗi khác. AI sửa mò mà không tìm nguyên nhân gốc rễ.*
+
+👉 **You are treating AI as a "Junior Developer". You need to MANAGE it.**  
+*Bạn đang dùng AI như thực tập sinh. Bạn cần phải QUẢN LÝ nó.*
 
 ---
 
 ## ✅ The Solution: AWF 3.0
 
-AWF là bộ 14 lệnh Global (**Global Workflows**) giúp cài đặt "kỷ luật thép" cho AI. Nó buộc AI phải tuân theo quy trình chuẩn Enterprise:
+**AWF is a suite of 14 Global Workflows that enforces "Iron Discipline".**  
+*AWF là bộ 14 lệnh Global thiết lập "Kỷ luật thép" cho AI.*
 
-*   **Plan trước, Code sau**: Cấm gõ phím khi chưa có Spec (`/plan`).
-*   **Safety First**: Tự động check bảo mật trước khi đưa code (`/code`).
-*   **Infinite Memory**: Lưu toàn bộ context vào file `.brain` để không bao giờ quên (`/save-brain`).
+*   **Plan First**: No coding allowed without a Spec (`/plan`).  
+    *Cấm code khi chưa có kế hoạch.*
+*   **Safety First**: Auto-check security before coding (`/code`).  
+    *Tự động kiểm tra bảo mật.*
+*   **Infinite Memory**: Save context to `.brain` file (`/save-brain`).  
+    *Lưu ngữ cảnh vào file não bộ vĩnh cửu.*
 
 ---
 
 ## 📦 Installation (Global)
 
-Chạy **1 lần duy nhất**. AWF sẽ được cài vào hệ thống (`~/.gemini/antigravity/global_workflows`) và tự động kích hoạt cho **mọi dự án** bạn mở sau này.
+**Install once. Works on every project.**  
+*Cài 1 lần. Dùng cho mọi dự án.*
 
 ### 🪟 Windows (PowerShell)
-Mở Terminal trong Antigravity/Cursor (Ctrl + `) và dán lệnh sau:
+Open Terminal in Antigravity/Cursor (Ctrl + `) and paste:  
+*Mở Terminal và dán lệnh sau:*
 
 ```powershell
 iex "& { $(irm https://raw.githubusercontent.com/TUAN130294/awf/main/install.ps1) }"
@@ -46,73 +65,69 @@ iex "& { $(irm https://raw.githubusercontent.com/TUAN130294/awf/main/install.ps1
 curl -fsSL https://raw.githubusercontent.com/TUAN130294/awf/main/install.sh | sh
 ```
 
-> **Sau khi cài:** Hãy khởi động lại Antigravity/Cursor để hệ thống nhận diện Global Workflows. Test bằng cách gõ `/` trong khung chat.
+> **Restart your IDE after installation.**  
+> *Khởi động lại Antigravity/Cursor sau khi cài.*
 
 ---
 
-## 🎮 Hướng dẫn sử dụng (Best Practices)
+## 🎮 How to Use (Hướng dẫn)
 
-Đừng chat lan man. Hãy dùng quy trình 3 bước này để đạt hiệu quả cao nhất:
+**Follow this 3-step process:**  
+*Tuân thủ quy trình 3 bước:*
 
-### 1. Khởi động & Lập kế hoạch
-*   **`/init`**: Dùng cho dự án mới tinh. Setup folder structure, git, dependencies.
-*   **`/recap`**: Dùng đầu ngày làm việc. AI đọc file `.brain` để nhớ lại hôm qua đang làm gì.
-*   **`/plan` (QUAN TRỌNG NHẤT)**:
-    *   *Input:* `/plan Thêm tính năng thanh toán qua Stripe`
-    *   *AI Action:* Đọc DB, đọc API Docs, viết file `docs/specs/payment.md`.
-    *   *Benefit:* Bạn duyệt logic TRƯỚC khi tốn token viết code.
+### 1. Planning Phase (Lập kế hoạch)
+*   **`/init`**:  
+    **EN**: Setup new project structure & git.  
+    **VI**: Khởi tạo dự án mới.
+*   **`/recap`**:  
+    **EN**: Start day. AI reads `.brain` to restore context.  
+    **VI**: Đầu ngày làm việc. AI đọc `.brain` để nhớ lại ngữ cảnh.
+*   **`/plan` (CRITICAL)**:  
+    *Input:* `/plan Add Stripe Payment`  
+    *Action:* Read DB & Docs -> Write `docs/specs/payment.md`.  
+    *Benefit:* **Approve logic BEFORE coding.** (Duyệt logic trước khi code).
 
-### 2. Xây dựng (Construction)
-*   **`/visualize`**: Designer Mode. Yêu cầu AI vẽ HTML/CSS hoặc Component UI trước.
-*   **`/code` (QUAN TRỌNG NHẤT)**:
-    *   *Input:* `/code Implement payment theo file spec vừa tạo`
-    *   *AI Action:* Viết code + Viết Unit Test + Check SQL Injection + Tự Review.
-    *   *Benefit:* Code sạch, an toàn, ít lỗi vặt.
+### 2. Construction Phase (Xây dựng)
+*   **`/visualize`**:  
+    **EN**: Designer Mode. Generate UI/Components.  
+    **VI**: Tạo giao diện UI/UX.
+*   **`/code` (CRITICAL)**:  
+    *Input:* `/code Implement payment based on spec`  
+    *Action:* Write Code + Unit Test + Security Check.  
+    *Benefit:* **Clean & Safe Code.** (Code sạch và an toàn).
 
-### 3. Vận hành & Bảo trì (Ops)
-*   **`/debug`**: "Sherlock Holmes Mode". Ép AI đọc log, phân tích nguyên nhân gốc rễ (Root Cause Analysis) thay vì đoán mò.
-*   **`/audit`**: Kiểm tra sức khỏe dự án. Tìm code chết, thư viện cũ, lỗ hổng bảo mật.
-*   **`/deploy`**: Chuẩn bị cho Production (Optimize build, Dockerize).
+### 3. Operations Phase (Vận hành)
+*   **`/debug`**: "Sherlock Holmes Mode". Find Root Cause.  
+    *Tìm nguyên nhân gốc rễ.*
+*   **`/audit`**: Health check & Security scan.  
+    *Kiểm tra sức khỏe dự án.*
+*   **`/deploy`**: Dockerize & Production setup.  
+    *Đóng gói lên Production.*
 
-### 4. Bộ nhớ (Memory)
-*   **`/save-brain` (VŨ KHÍ BÍ MẬT)**:
-    *   *Khi nào dùng:* Cuối buổi làm việc, hoặc khi chat quá dài.
-    *   *Tác dụng:* Tóm tắt toàn bộ kiến thức mới vào file `.brain`.
-    *   *Mẹo:* Sau khi save, bạn có thể xóa chat history (New Chat) để tiết kiệm Token mà AI vẫn nhớ mọi thứ!
+### 4. Memory (Bộ nhớ)
+*   **`/save-brain`**:  
+    **EN**: Save comprehensive context to `.brain`.  
+    **VI**: Lưu toàn bộ kiến thức vào file `.brain`.  
+    *Tip: You can clear chat history after saving! (Có thể xoá chat sau khi lưu)*
 
 ---
 
-## 📚 Danh sách 14 Lệnh
+## 📚 Command List (Danh sách lệnh)
 
 | Command | Role | Description |
 | :--- | :--- | :--- |
-| **`/plan`** | Architect | Thiết kế tính năng, DB Schema, Logic Flow. |
-| **`/code`** | Senior Dev | Viết code, Refactor, Security Check. |
-| **`/visualize`** | Designer | Tạo UI/UX, Component, TailwindCSS. |
-| **`/debug`** | Detective | Sửa lỗi sâu (Deep debugging). |
-| **`/save-brain`** | Librarian | Lưu context dự án vào bộ nhớ vĩnh cửu. |
-| **`/recap`** | Historian | Khôi phục context từ bộ nhớ. |
-| **`/init`** | Founder | Khởi tạo dự án mới. |
-| **`/test`** | QA Engineer | Viết & Chạy test case. |
-| **`/audit`** | Security | Kiểm tra lỗ hổng & Tech Debt. |
-| **`/refactor`** | Cleaner | Dọn dẹp code, tối ưu hiệu năng. |
-| **`/deploy`** | DevOps | Đóng gói, Docker, CI/CD. |
-| **`/rollback`** | Time Traveler | Quay lại phiên bản ổn định trước đó. |
-| **`/run`** | Operator | Chạy ứng dụng thông minh. |
-| **`/cloudflare-tunnel`** | Network Admin | Quản lý tunnel, domain. |
+| **`/plan`** | Architect | Thiết kế tính năng / Design Feature |
+| **`/code`** | Senior Dev | Viết code an toàn / Secure Coding |
+| **`/visualize`** | Designer | Tạo UI/UX / Generate UI |
+| **`/debug`** | Detective | Sửa lỗi sâu / Deep Debugging |
+| **`/save-brain`** | Librarian | Lưu kiến thức / Save Context |
+| **`/recap`** | Historian | Khôi phục kiến thức / Restore Context |
+| **`/init`** | Founder | Khởi tạo dự án / Data Setup |
+| **`/test`** | QA Engineer | Kiểm thử / Testing |
+| **`/audit`** | Security | Kiểm tra bảo mật / Security Check |
+| **`/deploy`** | DevOps | Deploy & Docker |
+| **`/cloudflare-tunnel`** | Admin | Quản lý Tunnel |
 
 ---
 
-## ❓ FAQ
-
-**Q: Tôi có cần copy file workflows vào từng dự án không?**  
-A: **KHÔNG.** Với bản v3.0 này, workflows được cài Global. Bạn mở bất kỳ dự án nào lên cũng dùng được ngay.
-
-**Q: Nó có tốn nhiều Token không?**  
-A: Ngược lại, nó giúp **tiết kiệm Token dài hạn**. Thay vì chat lan man 100 câu tốn kém, bạn dùng `/plan` và `/code` để làm đúng ngay từ đầu. Dùng `/save-brain` để nén context lại, không cần giữ history dài.
-
-**Q: Dùng với Github Copilot được không?**  
-A: AWF được tối ưu tốt nhất cho **Antigravity (Google)** và **Cursor/Windsurf**. Các AI khác có thể hiểu nội dung file markdown nhưng không kích hoạt được native workflow.
-
----
-*Built with ❤️ in Vibe Coding Mode.*
+*Built by Antigravity in Vibe Coding Mode.*
