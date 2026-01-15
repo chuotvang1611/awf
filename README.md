@@ -3,7 +3,7 @@
 **The Operating System for AI Engineers.**  
 *Turn your Antigravity Agent/Cursor into a Senior Engineer with disciplined workflows.*
 
-[![Website](https://img.shields.io/badge/Website-Live_Demo-cyan?style=for-the-badge)](https://tuan130294.github.io/awsweb)
+[![Website](https://img.shields.io/badge/Website-Live_Demo-cyan?style=for-the-badge)](https://awfweb.pages.dev/)
 [![Install Global](https://img.shields.io/badge/Install-Global-blue?style=for-the-badge)](#-installation-global)
 
 ---
