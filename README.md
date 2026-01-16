@@ -35,7 +35,7 @@
 
 ## ✅ The Solution: AWF 3.0
 
-**AWF is a suite of 14 Global Workflows that enforces "Iron Discipline".**  
+**AWF is a suite of 16 Global Workflows that enforces "Iron Discipline".**  
 *AWF là bộ 14 lệnh Global thiết lập "Kỷ luật thép" cho AI.*
 
 *   **Plan First**: No coding allowed without a Spec (`/plan`).  
@@ -123,7 +123,11 @@ curl -fsSL https://raw.githubusercontent.com/TUAN130294/awf/main/install.sh | sh
 | **`/save-brain`** | Librarian | Lưu kiến thức / Save Context |
 | **`/recap`** | Historian | Khôi phục kiến thức / Restore Context |
 | **`/init`** | Founder | Khởi tạo dự án / Data Setup |
+| **`/next`** | Navigator | Gợi ý bước tiếp theo / Next Step Guide |
+| **`/run`** | Operator | Chạy ứng dụng / Run App |
 | **`/test`** | QA Engineer | Kiểm thử / Testing |
+| **`/refactor`** | Clean Coder | Tối ưu code / Code Refactoring |
+| **`/rollback`** | Time Traveler | Khôi phục code cũ / Revert Changes |
 | **`/audit`** | Security | Kiểm tra bảo mật / Security Check |
 | **`/deploy`** | DevOps | Deploy & Docker |
 | **`/cloudflare-tunnel`** | Admin | Quản lý Tunnel |
